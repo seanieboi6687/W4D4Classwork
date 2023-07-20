@@ -57,5 +57,11 @@ def largest_contiguous_subsum(list)
     return sum_arr[-1]
 end
 
+def largest_contiguous_subsum2(list)
+    
+    list.inject(0) {|acc, ele| acc += ele if (acc + ele) > acc} 
+    
+end 
+
 list = [5, 3, -7]
 p largest_contiguous_subsum(list) # => 8
