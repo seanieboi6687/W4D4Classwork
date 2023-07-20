@@ -63,5 +63,5 @@ def largest_contiguous_subsum2(list)
     
 end 
 
-list = [5, 3, -7]
+list = [2, 3, -6, 7, -6, 7]
 p largest_contiguous_subsum(list) # => 8
