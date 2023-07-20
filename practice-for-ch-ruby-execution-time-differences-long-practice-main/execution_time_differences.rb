@@ -32,4 +32,30 @@ list = [ 0, 3, 5, 4, -5, 10, 1, 90 ]
 my_min(list)  # =>  -5
 
 list = [ 0, 3, 5, 4, -5, 10, 1, 90 ]
-p my_min2(list)  # =>  -5
+my_min2(list)  # =>  -5
+
+def largest_contiguous_subsum(list)
+    newarr = []
+
+    i = 0
+    while i < list.length
+        list.each_with_index do |ele, idx|
+            if idx >= i
+                newarr << list[i..idx]
+            end
+        end
+        i += 1
+    end
+
+    sum_arr = []
+
+    newarr.each do |subarr|
+        sum_arr << subarr.sum
+    end
+
+    sum_arr.sort!
+    return sum_arr[-1]
+end
+
+list = [5, 3, -7]
+p largest_contiguous_subsum(list) # => 8
