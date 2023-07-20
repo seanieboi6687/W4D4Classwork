@@ -40,7 +40,10 @@ def second_anagram?(str_1, str_2)
     tempstring.length == 0
 end 
 
+def third_anagram?(str_1, str_2)
 
+    str_1.chars.sort == str_2.chars.sort
+end
 
-p second_anagram?("gizmo", "sally")
-p second_anagram?("elvis", "lives")
+p third_anagram?("gizmo", "sally")
+p third_anagram?("elvis", "lives")
